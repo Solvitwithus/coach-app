@@ -39,11 +39,11 @@ const TabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="chats"
+        name="Payment"
         component={chitchat}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Icon name="message" size={25} color="pink" />
+            <Icon name="attach-money" size={25} color="pink" />
           ),
         }}
       />

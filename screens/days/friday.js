@@ -5,8 +5,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import { Picker } from '@react-native-picker/picker';
 
-
-const Appointment = () => {
+const Friday = () => {
   const navigation = useNavigation();
 
   const handlesubmit = () => {
@@ -14,8 +13,10 @@ const Appointment = () => {
     Alert.alert(`You have selected ${selectedSport} - ${selectedUnit} coach: ${chess}, ${tennis}, ${swim}, ${skate}`);
   };
   const handlethepress = (itemId) => {
-   
-    if(itemId === '1'){
+    if(itemId === '0'){
+      navigation.navigate('Appointment');
+    }
+    else if(itemId === '1'){
       navigation.navigate('Tue');
     }
     else if(itemId === '2'){
@@ -24,9 +25,7 @@ const Appointment = () => {
     else if(itemId === '3'){
       navigation.navigate('thur');
     }
-    else if(itemId === '4'){
-      navigation.navigate('fri');
-    }
+   
     else if(itemId === '5'){
       navigation.navigate('sat');
     }
@@ -107,7 +106,7 @@ const handleskate = (value) => {
               <View
         style={[
           styles.innercont,
-          item.id === '0' ? styles.selectedInnerCont : null,
+          item.id === '4' ? styles.selectedInnerCont : null,
         ]}
         key={item.id}
       >
@@ -120,7 +119,7 @@ const handleskate = (value) => {
         />
       </View>
 
-      <Text style={styles.text}>Monday Appointment</Text>
+      <Text style={styles.text}>Friday Appointment</Text>
       <View>
         <TouchableOpacity onPress={handlePickerOpen}>
           <TextInput
@@ -401,4 +400,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Appointment;
+export default Friday;

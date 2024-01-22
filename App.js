@@ -61,7 +61,12 @@ import John from "./screens/john";
 import Emmanuel from "./screens/emmanuel";
 import Lyne from "./screens/lyne";
 import Obura from "./screens/Obura";
-
+import Tuesday from "./screens/days/tuesday";
+import Wednesday from "./screens/days/wednesday";
+import Thursday from "./screens/days/thursday";
+import Friday from "./screens/days/friday";
+import Saturday from "./screens/days/saturday";
+import Sunday from "./screens/days/sunnday";
 
 
 
@@ -147,6 +152,73 @@ const App = () => {
     }}/>
 
 <Stack.Screen name="Luisa Clarissa" component={Clarissa} options={{animation: 'slide_from_bottom', headerShown: true, headerStyle: {
+      backgroundColor: 'red',
+       // Change the background color here
+    },
+    headerTitleStyle: {
+      fontWeight: 'bold', // Change the font weight here
+      color: 'white',
+      fontSize:22 // Change the font color here
+    },
+    
+    }}/>
+
+<Stack.Screen name="Tue" component={Tuesday} options={{animation: 'slide_from_bottom', headerShown: false, headerStyle: {
+      backgroundColor: 'red',
+       // Change the background color here
+    },
+    headerTitleStyle: {
+      fontWeight: 'bold', // Change the font weight here
+      color: 'white',
+      fontSize:22 // Change the font color here
+    },
+    
+    }}/>
+    <Stack.Screen name="wed" component={Wednesday} options={{animation: 'slide_from_bottom', headerShown: false, headerStyle: {
+      backgroundColor: 'red',
+       // Change the background color here
+    },
+    headerTitleStyle: {
+      fontWeight: 'bold', // Change the font weight here
+      color: 'white',
+      fontSize:22 // Change the font color here
+    },
+    
+    }}/>
+    <Stack.Screen name="thur" component={Thursday} options={{animation: 'slide_from_bottom', headerShown: false, headerStyle: {
+      backgroundColor: 'red',
+       // Change the background color here
+    },
+    headerTitleStyle: {
+      fontWeight: 'bold', // Change the font weight here
+      color: 'white',
+      fontSize:22 // Change the font color here
+    },
+    
+    }}/>
+    <Stack.Screen name="fri" component={Friday} options={{animation: 'slide_from_bottom', headerShown: false, headerStyle: {
+      backgroundColor: 'red',
+       // Change the background color here
+    },
+    headerTitleStyle: {
+      fontWeight: 'bold', // Change the font weight here
+      color: 'white',
+      fontSize:22 // Change the font color here
+    },
+    
+    }}/>
+    <Stack.Screen name="sat" component={Saturday} options={{animation: 'slide_from_bottom', headerShown: false, headerStyle: {
+      backgroundColor: 'red',
+       // Change the background color here
+    },
+    headerTitleStyle: {
+      fontWeight: 'bold', // Change the font weight here
+      color: 'white',
+      fontSize:22 // Change the font color here
+    },
+    
+    }}/>
+    <Stack.Screen name="sun" component={Sunday} options={{animation: 'slide_from_bottom', headerShown: false, headerStyle: {
       backgroundColor: 'red',
        // Change the background color here
     },

@@ -5,8 +5,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import { Picker } from '@react-native-picker/picker';
 
-
-const Appointment = () => {
+const Saturday = () => {
   const navigation = useNavigation();
 
   const handlesubmit = () => {
@@ -14,8 +13,10 @@ const Appointment = () => {
     Alert.alert(`You have selected ${selectedSport} - ${selectedUnit} coach: ${chess}, ${tennis}, ${swim}, ${skate}`);
   };
   const handlethepress = (itemId) => {
-   
-    if(itemId === '1'){
+    if(itemId === '0'){
+      navigation.navigate('Appointment');
+    }
+    else if(itemId === '1'){
       navigation.navigate('Tue');
     }
     else if(itemId === '2'){
@@ -27,9 +28,7 @@ const Appointment = () => {
     else if(itemId === '4'){
       navigation.navigate('fri');
     }
-    else if(itemId === '5'){
-      navigation.navigate('sat');
-    }
+   
     else if(itemId === '6'){
       navigation.navigate('sun');
     }
@@ -107,7 +106,7 @@ const handleskate = (value) => {
               <View
         style={[
           styles.innercont,
-          item.id === '0' ? styles.selectedInnerCont : null,
+          item.id === '5' ? styles.selectedInnerCont : null,
         ]}
         key={item.id}
       >
@@ -120,7 +119,7 @@ const handleskate = (value) => {
         />
       </View>
 
-      <Text style={styles.text}>Monday Appointment</Text>
+      <Text style={styles.text}>Saturday Appointment</Text>
       <View>
         <TouchableOpacity onPress={handlePickerOpen}>
           <TextInput
@@ -143,7 +142,7 @@ const handleskate = (value) => {
       </View>
       <View style ={{flexDirection:'row',backgroundColor:'grey',width:'96%',borderRadius:13,alignSelf:'center',height:80}}>
 <Icon name ="timer" size={40} color={'white'} style ={{padding:20}}/>
-<Text style={{color:'#333333',fontWeight:'bold' , fontSize:25,paddingTop:20}}>0600 hrs ~ 1800 hrs</Text>
+<Text style={{color:'#333333',fontWeight:'bold' , fontSize:25,paddingTop:20}}>0600 hrs ~ 1200 hrs</Text>
       </View>
       <Text style={styles.texti}>Select Coach</Text>
       <View style ={styles.cont}>
@@ -401,4 +400,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Appointment;
+export default Saturday;
