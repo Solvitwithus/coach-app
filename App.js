@@ -1,6 +1,6 @@
 import React from "react";
 import Detail from "./screens/detailscreen";
-import Payment from "./screens/paymentscreen";
+import Paymenti from "./screens/paymentscreen";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 import tab from "./screens/Navigation/navtab";
@@ -78,7 +78,7 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="main" component={tab} options={{animation: 'slide_from_bottom'}}/>
-      <Stack.Screen name="Payment" component={Payment} options={{animation: 'slide_from_bottom'}}/>
+      <Stack.Screen name="Paymenti" component={Paymenti} options={{animation: 'slide_from_bottom'}}/>
         <Stack.Screen name="Detail" component={Detail} options={{animation: 'slide_from_bottom'}}/>
         <Stack.Screen name="football coaches" component={football} options={{animation: 'slide_from_bottom', headerShown: true, headerStyle: {
       backgroundColor: 'red',
